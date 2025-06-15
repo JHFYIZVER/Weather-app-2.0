@@ -25,10 +25,10 @@ const CurrentWeather = ({ currentWeather }: Props) => {
         <p className="text-sm font-medium">{currentWeather.date}</p>
       </CardHeader>
       <CardContent className="flex items-center justify-between gap-10 font-medium">
-        <div className="w-1/2 flex items-center justify-center">
-          <Icons className="size-40" name={currentWeather.icon} />
+        <div className="w-1/2 flex items-center justify-start lg:justify-center">
+          <Icons className="size-30 lg:size-40" name={currentWeather.icon} />
         </div>
-        <div className="absolute top-1/2 -translate-y-1/2 right-5">
+        <div className="absolute max-w-48 top-1/2 -translate-y-1/2 -right-6 lg:max-w-none lg:right-5">
           <p className="text-4xl font-bold lg:text-7xl mb-10">
             {currentWeather.currentTemperature}&deg;
           </p>

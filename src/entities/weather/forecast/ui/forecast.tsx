@@ -18,7 +18,7 @@ type Props = {
 
 const Forecast = ({ forecastWeather }: Props) => {
   return (
-    <Card className="flex flex-col max-w-lg w-full p-5 rounded-xl">
+    <Card className="flex flex-col max-w-lg w-full rounded-xl">
       <CardHeader>
         <CardTitle className="font-bold flex items-center gap-2 text-white/70">
           <CalendarDaysIcon className="size-5" /> Прогноз на 5 дней

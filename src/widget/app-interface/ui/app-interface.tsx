@@ -30,10 +30,10 @@ const AppInterface = async ({ city }: { city: string }) => {
   };
 
   return (
-    <main className="max-w-[1102px] w-full mx-auto p-5 bg-white/2">
-      <div className="flex gap-2">
+    <main className="max-w-[1110px] w-full mx-auto p-5">
+      <div className="flex flex-wrap gap-4 lg:flex-nowrap">
         <CurrentWeather currentWeather={formattedCurrnetWeather} />
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 content-center">
+        <div className="grid w-full gap-4 grid-cols-2 content-center lg:w-fit">
           <HumidityInfo
             humidity={weatherCityData.current!.temperature.humidity}
           />
@@ -45,8 +45,8 @@ const AppInterface = async ({ city }: { city: string }) => {
         </div>
         <PopularCities />
       </div>
-      <div className="flex gap-2 mt-2">
-        <div className="flex flex-col gap-2 max-w-[582px] w-full">
+      <div className="flex flex-wrap gap-4 mt-4 lg:flex-nowrap">
+        <div className="flex flex-col gap-4 max-w-[590px] w-full">
           <SunriseInfo
             timezone={weatherCityData.current!.timezone}
             sunrise={weatherCityData.current!.sunrise}

@@ -15,7 +15,7 @@ const PopularCities = () => {
   ];
 
   return (
-    <Card className="flex flex-col max-w-56 p-5">
+    <Card className="flex flex-col w-full lg:max-w-56 p-6">
       <CardTitle className="font-bold">Популярные города</CardTitle>
       <CardContent className="space-y-6 flex flex-col w-full px-0">
         {cities.map((city) => (

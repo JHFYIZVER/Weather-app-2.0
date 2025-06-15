@@ -10,13 +10,13 @@ import React from "react";
 
 const VisibilityInfo = ({ visibility }: { visibility: number }) => {
   return (
-    <Card className="max-w-46 h-44">
-      <CardHeader>
-        <CardTitle className="flex gap-4 items-center">
+    <Card className="h-44 max-w-none w-full lg:p-2 lg:max-w-46 xl:p-6">
+      <CardHeader className="lg:p-0">
+        <CardTitle className="flex text-sm gap-2 items-center flex-wrap xl:flex-nowrap">
           <EyeIcon className="size-6 animate-pulse" /> Видимость
         </CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="lg:p-0">
         <CardDescription className="text-white text-xl font-bold">
           {visibility / 1000} км
         </CardDescription>
