@@ -1,6 +1,6 @@
-import AppInterface from "./widget/app-interface/ui/app-interface";
-import Header from "./widget/header/ui/header";
-import HomeScreen from "./widget/home-screen/ui/home-screen";
+import AppInterface from "../widget/app-interface/ui/app-interface";
+import Header from "../widget/header/ui/header";
+import HomeScreen from "../widget/home-screen/ui/home-screen";
 
 type Props = {
   searchParams: Promise<{ city: string }>;
