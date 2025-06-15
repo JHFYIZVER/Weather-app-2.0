@@ -20,16 +20,27 @@ const getWeatherData = async (city: string) => {
         description: cityData.weather[0].description,
       },
       temperature: {
-        current: cityData.main.temp,
-        feelsLike: cityData.main.feels_like,
+        current: Math.round(cityData.main.temp),
+        feelsLike: Math.round(cityData.main.feels_like),
         min: cityData.main.temp_min,
         max: cityData.main.temp_max,
         humidity: cityData.main.humidity,
         pressure: cityData.main.pressure,
       },
-      windSpeed: cityData.wind.speed,
+      wind: {
+        speed: cityData.wind.speed,
+        deg: cityData.wind.deg,
+        gust: cityData.wind.gust,
+      },
+      sunrise: cityData.sys.sunrise,
+      timezone: cityData.timezone,
+      sunset: cityData.sys.sunset,
       clouds: cityData.clouds.all,
       visibility: cityData.visibility,
+      coord: {
+        lat: cityData.coord.lat,
+        lon: cityData.coord.lon,
+      },
     };
 
     return formattedData;

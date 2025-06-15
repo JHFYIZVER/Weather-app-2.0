@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="max-w-7xl w-full mx-auto flex items-center gap-4 px-3 py-5 mb-5">
+    <header className="max-w-[1102px] w-full mx-auto flex items-center gap-4 px-3 py-5 mb-5">
       <Button className="relative">
         <Link
           target="_blank"

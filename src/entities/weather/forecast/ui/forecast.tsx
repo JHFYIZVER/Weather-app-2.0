@@ -6,7 +6,7 @@ import { CalendarDaysIcon } from "lucide-react";
 import React from "react";
 
 type Props = {
-  weatherForecast: {
+  forecastWeather: {
     forecast: {
       date: string;
       description: string;
@@ -16,22 +16,22 @@ type Props = {
   };
 };
 
-const Forecast = ({ weatherForecast }: Props) => {
+const Forecast = ({ forecastWeather }: Props) => {
   return (
-    <Card className="flex flex-col max-w-sm p-5 rounded-xl">
+    <Card className="flex flex-col max-w-lg w-full p-5 rounded-xl">
       <CardHeader>
         <CardTitle className="font-bold flex items-center gap-2 text-white/70">
-          <CalendarDaysIcon className="w-5 h-5" /> Прогноз на 5 дней
+          <CalendarDaysIcon className="size-5" /> Прогноз на 5 дней
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
-        {weatherForecast.forecast.map((item, index) => (
+      <CardContent>
+        {forecastWeather.forecast.map((item, index) => (
           <div key={item.date}>
             <div className="flex items-center justify-between gap-4">
               <p className="text-white font-bold">
                 {item.date.split("-").reverse().slice(0, 2).join(".")}
               </p>
-              <Icons className="w-10 h-10" name={item.description} />
+              <Icons className="size-10" name={item.description} />
               <div className="flex w-full max-w-42 select-none flex-row items-center justify-between gap-2 pr-2 text-sm">
                 <p>{item.tempMin}&deg;</p>
                 <TemperatureRange
@@ -42,7 +42,7 @@ const Forecast = ({ weatherForecast }: Props) => {
                 <p>{item.tempMax}&deg;</p>
               </div>
             </div>
-            {index !== weatherForecast.forecast.length - 1 && (
+            {index !== forecastWeather.forecast.length - 1 && (
               <Separator className="mt-1" />
             )}
           </div>
