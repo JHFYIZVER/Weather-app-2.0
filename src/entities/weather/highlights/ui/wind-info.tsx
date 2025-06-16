@@ -17,18 +17,12 @@ type Props = {
 };
 
 const WindInfo = ({ wind }: Props) => {
-  let name;
-
-  if (wind.gust < 6) name = "Low-wind";
-  if (wind.gust > 5 && wind.gust < 15) name = "Medium-wind";
-  if (wind.gust > 14) name = "High-wind";
-
   return (
     <Card className="relative max-w-none w-full lg:p-2 lg:max-w-46 xl:p-6">
       <CardHeader className="lg:p-0">
         <CardTitle className="flex text-sm gap-2 items-center flex-wrap xl:flex-nowrap">
           <div className="size-6 flex items-center justify-center">
-            <Icons className="size-8 object-cover" name={name!} />
+            <Icons className="size-8 object-cover" name={"Wind"} />
           </div>
           Ветер
         </CardTitle>
