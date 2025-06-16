@@ -46,7 +46,7 @@ const AppInterface = async ({ city }: { city: string }) => {
         <PopularCities />
       </div>
       <div className="flex flex-wrap gap-4 mt-4 lg:flex-nowrap">
-        <div className="flex flex-col gap-4 max-w-[590px] w-full">
+        <div className="flex flex-col gap-4 max-w-lg w-full">
           <SunriseInfo
             timezone={weatherCityData.current!.timezone}
             sunrise={weatherCityData.current!.sunrise}

@@ -14,7 +14,7 @@ import formatTime from "../lib/format-time";
 const SunriseInfo = ({ sunrise, timezone }: { sunrise: number, timezone: number }) => {
    const sunriseTime = formatTime(sunrise, timezone);
   return (
-    <Card className="flex max-w-2xl h-44 flex-row-reverse justify-between">
+    <Card className="flex max-w-lg h-44 flex-row-reverse justify-between">
       <CardHeader className="w-1/5 items-center justify-center mr-5">
         <CardTitle className="text-white/70 flex gap-4 items-center text-lg lg:text-xl">
           Рассвет

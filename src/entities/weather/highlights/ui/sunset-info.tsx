@@ -21,7 +21,7 @@ const SunsetInfo = ({
   const sunsetTime = formatTime(sunset, timezone);
 
   return (
-    <Card className="flex max-w-2xl w-full h-44 flex-row-reverse justify-between">
+    <Card className="flex max-w-lg w-full h-44 flex-row-reverse justify-between">
       <CardHeader className="w-1/5 items-center justify-center mr-5">
         <CardTitle className="text-white/70 flex gap-4 items-center text-lg lg:text-xl">
           Закат
