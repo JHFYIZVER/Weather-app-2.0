@@ -15,6 +15,9 @@ const Map = ({ lat, lon }: { lat: number; lon: number }) => {
       container: mapRef.current!,
       center: [lon, lat],
       zoom: 10,
+      style: {
+        map: "basic_night",
+      } as tt.MapStyleConfig,
     });
   };
 
