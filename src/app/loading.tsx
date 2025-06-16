@@ -1,3 +1,5 @@
+"use client";
+
 import { Skeleton } from "@/shared/ui/skeleton";
 import Header from "@/widget/header/ui/header";
 import React from "react";
@@ -25,6 +27,7 @@ const Loading = () => {
             </div>
             <Skeleton className="flex flex-col max-w-2xl w-full rounded-xl" />
           </div>
+          <Skeleton className="w-full h-90 mt-4" />
         </div>
       </main>
     </>

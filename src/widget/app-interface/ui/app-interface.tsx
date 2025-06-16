@@ -10,6 +10,7 @@ import PressureInfo from "@/entities/weather/highlights/ui/pressure-info";
 import HumidityInfo from "@/entities/weather/highlights/ui/humidity-info";
 import SunsetInfo from "@/entities/weather/highlights/ui/sunset-info";
 import SunriseInfo from "@/entities/weather/highlights/ui/sunrise-info";
+import Map from "@/entities/map/ui/map";
 
 const AppInterface = async ({ city }: { city: string }) => {
   const weatherCityData = await getFullWeatherData(city);
@@ -58,6 +59,10 @@ const AppInterface = async ({ city }: { city: string }) => {
         </div>
         <Forecast forecastWeather={weatherCityData.forecast!} />
       </div>
+      <Map
+        lat={weatherCityData.current!.coord.lat}
+        lon={weatherCityData.current!.coord.lon}
+      />
     </main>
   );
 };
