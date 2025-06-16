@@ -28,7 +28,7 @@ const CurrentWeather = ({ currentWeather }: Props) => {
         <div className="w-1/2 flex items-center justify-start lg:justify-center">
           <Icons className="size-30 lg:size-40" name={currentWeather.icon} />
         </div>
-        <div className="absolute max-w-48 top-1/2 -translate-y-1/2 -right-6 lg:max-w-none lg:right-5">
+        <div className="absolute max-w-32 top-1/2 -translate-y-1/3 right-2 lg:max-w-none lg:right-5">
           <p className="text-4xl font-bold lg:text-7xl mb-10">
             {currentWeather.currentTemperature}&deg;
           </p>
