@@ -51,7 +51,7 @@ const TemperatureRange = React.forwardRef(
         {...props}
       >
         <SliderPrimitive.Track className="relative h-1.5 w-full grow select-none overflow-hidden rounded-full bg-primary/20">
-          <SliderPrimitive.Range className="absolute h-full rounded-full bg-gradient-to-l from-white to-blue-300" />
+          <SliderPrimitive.Range className="absolute h-full rounded-full bg-gradient-to-l from-greeb-300 to-blue-300" />
         </SliderPrimitive.Track>
       </SliderPrimitive.Root>
     );

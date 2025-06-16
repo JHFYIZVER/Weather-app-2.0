@@ -22,7 +22,7 @@ const PressureInfo = ({ pressure }: { pressure: number }) => {
         </CardTitle>
       </CardHeader>
       <CardContent className="lg:p-0">
-        <CardDescription className="text-white text-xl font-bold flex  items-center">
+        <CardDescription className=" text-xl font-bold flex  items-center">
           <div className="flex items-center flex-wrap">
             {Math.round(pressure * 0.75006)}{" "}
             <span className="ml-1 text-[10px]">мм рт. ст.</span>

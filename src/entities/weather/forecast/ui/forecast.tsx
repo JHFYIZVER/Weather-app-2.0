@@ -20,7 +20,7 @@ const Forecast = ({ forecastWeather }: Props) => {
   return (
     <Card className="flex flex-col max-w-2xl w-full rounded-xl">
       <CardHeader>
-        <CardTitle className="font-bold flex items-center gap-2 text-white/70">
+        <CardTitle className="font-bold flex items-center gap-2">
           <CalendarDaysIcon className="size-5" /> Прогноз на 5 дней
         </CardTitle>
       </CardHeader>
@@ -28,7 +28,7 @@ const Forecast = ({ forecastWeather }: Props) => {
         {forecastWeather.forecast.map((item, index) => (
           <div key={item.date}>
             <div className="flex items-center justify-between gap-4">
-              <p className="text-white font-bold">
+              <p className="font-bold">
                 {item.date.split("-").reverse().slice(0, 2).join(".")}
               </p>
               <Icons className="size-10" name={item.description} />

@@ -1,9 +1,10 @@
 "use client";
 import { Button } from "@/shared/ui/button";
-import { GithubIcon } from "lucide-react";
+import { GithubIcon, Moon } from "lucide-react";
 import React from "react";
-import SearchCity from "@/features/search-city/search-city";
+import SearchCity from "@/features/search-city/ui/search-city";
 import Link from "next/link";
+import ThemeSwitcher from "@/features/theme-switcher/ui/theme-switcher";
 
 const Header = () => {
   return (
@@ -19,6 +20,7 @@ const Header = () => {
         </Link>
       </Button>
       <SearchCity className="max-w-60" />
+      <ThemeSwitcher/>
     </header>
   );
 };

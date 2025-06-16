@@ -11,15 +11,21 @@ import {
 import React from "react";
 import formatTime from "../lib/format-time";
 
-const SunriseInfo = ({ sunrise, timezone }: { sunrise: number, timezone: number }) => {
-   const sunriseTime = formatTime(sunrise, timezone);
+const SunriseInfo = ({
+  sunrise,
+  timezone,
+}: {
+  sunrise: number;
+  timezone: number;
+}) => {
+  const sunriseTime = formatTime(sunrise, timezone);
   return (
     <Card className="flex max-w-lg h-44 flex-row-reverse justify-between">
       <CardHeader className="w-1/5 items-center justify-center mr-5">
-        <CardTitle className="text-white/70 flex gap-4 items-center text-lg lg:text-xl">
+        <CardTitle className="flex gap-4 items-center text-lg lg:text-xl">
           Рассвет
         </CardTitle>
-        <CardDescription className="text-white text-2xl font-bold">
+        <CardDescription className="text-2xl font-bold">
           {sunriseTime}
         </CardDescription>
       </CardHeader>

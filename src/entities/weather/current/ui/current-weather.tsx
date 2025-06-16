@@ -32,10 +32,10 @@ const CurrentWeather = ({ currentWeather }: Props) => {
           <p className="text-4xl font-bold lg:text-7xl mb-10">
             {currentWeather.currentTemperature}&deg;
           </p>
-          <p className="text-lg first-letter:capitalize text-white/70">
+          <p className="text-lg first-letter:capitalize">
             {currentWeather.description}
           </p>
-          <p className="text-white/70">
+          <p className="">
             Ощущается как{" "}
             <span className="font-bold">
               {currentWeather.feelsLikeTemperature}&deg;

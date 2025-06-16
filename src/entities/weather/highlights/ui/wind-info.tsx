@@ -35,7 +35,7 @@ const WindInfo = ({ wind }: Props) => {
       </CardHeader>
       <CardContent className="lg:p-0">
         <CardDescription className="items-center flex flex-col">
-          <p className="text-lg size-10 w-full flex items-center justify-center relative z-10 -bottom-6 text-white font-bold">
+          <p className="text-lg size-10 w-full flex items-center justify-center relative z-10 -bottom-7 font-bold">
             {wind.speed}м/с
           </p>
           <Icons

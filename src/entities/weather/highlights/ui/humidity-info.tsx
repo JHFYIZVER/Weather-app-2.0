@@ -23,7 +23,7 @@ const HumidityInfo = ({ humidity }: { humidity: number }) => {
         </CardTitle>
       </CardHeader>
       <CardContent className="lg:p-0">
-        <CardDescription className="text-white text-xl font-bold">
+        <CardDescription className="text-xl font-bold">
           {humidity}%
         </CardDescription>
       </CardContent>
