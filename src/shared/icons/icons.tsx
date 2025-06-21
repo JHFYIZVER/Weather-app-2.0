@@ -13,7 +13,6 @@ const Icons = ({
   return (
     <Image
       quality={60}
-      rel="preload"
       style={props.style}
       className={className}
       src={`/weather-icons/${name}.svg`}

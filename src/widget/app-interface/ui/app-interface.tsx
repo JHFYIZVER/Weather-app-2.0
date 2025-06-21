@@ -1,16 +1,25 @@
-import React from "react";
+import dynamic from "next/dynamic";
+
 import getFullWeatherData from "../lib/get-weather-data";
 import CityNotFound from "@/shared/ui/city-not-found";
 import PopularCities from "@/entities/cities/ui/popular-cities";
 import Forecast from "@/entities/weather/forecast/ui/forecast";
-import CurrentWeather from "@/entities/weather/current/ui/current-weather";
 import WindInfo from "@/entities/weather/highlights/ui/wind-info";
 import VisibilityInfo from "@/entities/weather/highlights/ui/visibility-info";
 import PressureInfo from "@/entities/weather/highlights/ui/pressure-info";
 import HumidityInfo from "@/entities/weather/highlights/ui/humidity-info";
-import SunsetInfo from "@/entities/weather/highlights/ui/sunset-info";
-import SunriseInfo from "@/entities/weather/highlights/ui/sunrise-info";
-import Map from "@/entities/map/ui/map";
+
+const SunsetInfo = dynamic(
+  () => import("@/entities/weather/highlights/ui/sunset-info")
+);
+
+const SunriseInfo = dynamic(
+  () => import("@/entities/weather/highlights/ui/sunrise-info")
+);
+const CurrentWeather = dynamic(
+  () => import("@/entities/weather/current/ui/current-weather")
+);
+const Map = dynamic(() => import("@/entities/map/ui/map"));
 
 const AppInterface = async ({ city }: { city: string }) => {
   const weatherCityData = await getFullWeatherData(city);

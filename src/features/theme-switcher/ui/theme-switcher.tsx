@@ -17,7 +17,12 @@ const ThemeSwitcher = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="relative" variant={"outline"} size={"icon"}>
+        <Button
+          aria-label="Toggle theme mode"
+          className="relative"
+          variant={"outline"}
+          size={"icon"}
+        >
           <SunIcon className="size-5 transform-gpu transform rotate-0 scale-100 transition-all will-change-transform duration-300 dark:-rotate-90 dark:scale-0" />
           <MoonIcon className="absolute size-5 transform-gpu transform rotate-90 scale-0 transition-all will-change-transform duration-300 dark:rotate-0 dark:scale-100" />
         </Button>

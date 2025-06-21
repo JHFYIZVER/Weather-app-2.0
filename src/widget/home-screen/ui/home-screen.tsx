@@ -6,8 +6,8 @@ import ThemeSwitcher from "@/features/theme-switcher/ui/theme-switcher";
 
 const HomeScreen = memo(() => {
   return (
-    <main>
-      <section className="flex px-5 items-center justify-center h-svh">
+    <main className="w-full">
+      <section className="max-w-[1110px] w-full mx-auto flex px-5 items-center justify-center h-svh">
         <Card className="flex max-w-4xl w-full items-center flex-col p-5 bg-white/2 lg:p-10 lg:gap-10">
           <CardHeader className="w-full">
             <CardTitle className="font-bold text-2xl md:text-3xl lg:text-4xl text-center">

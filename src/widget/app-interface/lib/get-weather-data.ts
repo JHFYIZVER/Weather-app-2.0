@@ -7,7 +7,12 @@ import {
 const getWeatherData = async (city: string) => {
   try {
     const data = await fetch(
-      `${process.env.BASE_URL}/weather?&q=${city}&units=metric&lang=ru&appid=${process.env.API_KEY}`
+      `${process.env.BASE_URL}/weather?&q=${city}&units=metric&lang=ru&appid=${process.env.API_KEY}`,
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
     );
     if (!data.ok) return null;
     const cityData = (await data.json()) as WeatherCityData;
@@ -52,7 +57,12 @@ const getWeatherData = async (city: string) => {
 const getWeatherForecast = async (city: string) => {
   try {
     const data = await fetch(
-      `${process.env.BASE_URL}/forecast?q=${city}&units=metric&lang=ru&appid=${process.env.API_KEY}`
+      `${process.env.BASE_URL}/forecast?q=${city}&units=metric&lang=ru&appid=${process.env.API_KEY}`,
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
     );
     if (!data.ok) return null;
     const forecastData = (await data.json()) as WeatherForecastData;
@@ -89,8 +99,10 @@ const getWeatherForecast = async (city: string) => {
 };
 
 export const getFullWeatherData = async (city: string) => {
-  const current = await getWeatherData(city);
-  const forecast = await getWeatherForecast(city);
+  const [current, forecast] = await Promise.all([
+    getWeatherData(city),
+    getWeatherForecast(city),
+  ]);
 
   if (!current && !forecast) return null;
 
