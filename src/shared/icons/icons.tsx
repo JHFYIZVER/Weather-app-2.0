@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import { CSSProperties } from "react";
 
 const Icons = ({
   name,
@@ -8,10 +8,12 @@ const Icons = ({
 }: {
   name: string;
   className?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }) => {
   return (
     <Image
+      quality={60}
+      rel="preload"
       style={props.style}
       className={className}
       src={`/weather-icons/${name}.svg`}

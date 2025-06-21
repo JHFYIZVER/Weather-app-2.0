@@ -31,7 +31,7 @@ const SunsetInfo = ({
         </CardDescription>
       </CardHeader>
       <CardContent className="w-1/2 max-h-35 flex items-center justify-center">
-        <Icons className="size-40 object-cover animate-pulse" name="Sunset" />
+        <Icons className="size-40 object-cover" name="Sunset" />
       </CardContent>
     </Card>
   );
