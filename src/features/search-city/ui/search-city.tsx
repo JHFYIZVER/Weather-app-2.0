@@ -31,13 +31,12 @@ const SearchCity = ({ className }: Props) => {
         type="text"
         placeholder="Название города"
       />
-      <div className="absolute right-5 top-1/2 -translate-y-1/2">
-        {isLoading ? (
-          <Loader2 className="size-5 animate-spin" />
-        ) : (
-          <SearchIcon className="size-5" />
-        )}
-      </div>
+
+      {isLoading ? (
+        <Loader2 className="size-5 animate-spin absolute right-5 top-1/2 -translate-y-1/2" />
+      ) : (
+        <SearchIcon className="size-5 absolute right-5 top-1/2 -translate-y-1/2" />
+      )}
     </label>
   );
 };
