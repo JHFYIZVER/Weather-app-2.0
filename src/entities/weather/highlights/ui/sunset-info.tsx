@@ -24,7 +24,7 @@ const SunsetInfo = ({
     <Card className="flex max-w-lg w-full h-44 flex-row-reverse justify-between">
       <CardHeader className="w-1/5 items-center justify-center mr-5">
         <CardTitle className="flex gap-4 items-center text-lg lg:text-xl">
-          Закат
+          <h3>Закат</h3>
         </CardTitle>
         <CardDescription className="text-2xl font-bold">
           {sunsetTime}

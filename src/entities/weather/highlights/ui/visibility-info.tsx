@@ -13,7 +13,7 @@ const VisibilityInfo = ({ visibility }: { visibility: number }) => {
     <Card className="h-44 max-w-none w-full lg:p-2 lg:max-w-46 xl:p-6">
       <CardHeader className="lg:p-0">
         <CardTitle className="flex text-sm gap-2 items-center flex-wrap xl:flex-nowrap">
-          <EyeIcon className="size-6 animate-pulse" /> Видимость
+          <EyeIcon className="size-6 animate-pulse" /> <h3>Видимость</h3>
         </CardTitle>
       </CardHeader>
       <CardContent className="lg:p-0">

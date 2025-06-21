@@ -20,7 +20,7 @@ const CurrentWeather = ({ currentWeather }: Props) => {
       <CardHeader>
         <CardTitle className="font-bold text-xl md:text-3xl lg:text-4xl">
           <span className="text-lg flex capitalize">{currentWeather.day}</span>
-          {currentWeather.cityName}
+          <h1>{currentWeather.cityName}</h1>
         </CardTitle>
         <p className="text-sm font-medium">{currentWeather.date}</p>
       </CardHeader>
@@ -35,7 +35,7 @@ const CurrentWeather = ({ currentWeather }: Props) => {
           <p className="text-lg first-letter:capitalize">
             {currentWeather.description}
           </p>
-          <p className="">
+          <p>
             Ощущается как{" "}
             <span className="font-bold">
               {currentWeather.feelsLikeTemperature}&deg;

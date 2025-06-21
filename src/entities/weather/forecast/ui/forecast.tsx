@@ -21,7 +21,7 @@ const Forecast = ({ forecastWeather }: Props) => {
     <Card className="flex flex-col max-w-2xl w-full rounded-xl">
       <CardHeader>
         <CardTitle className="font-bold flex items-center gap-2">
-          <CalendarDaysIcon className="size-5" /> Прогноз на 5 дней
+          <CalendarDaysIcon className="size-5" /> <h2>Прогноз на 5 дней</h2>
         </CardTitle>
       </CardHeader>
       <CardContent>

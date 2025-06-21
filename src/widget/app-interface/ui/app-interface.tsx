@@ -32,7 +32,7 @@ const AppInterface = async ({ city }: { city: string }) => {
 
   return (
     <main className="max-w-[1110px] w-full mx-auto p-5">
-      <div className="flex flex-wrap gap-4 lg:flex-nowrap">
+      <section className="flex flex-wrap gap-4 lg:flex-nowrap">
         <CurrentWeather currentWeather={formattedCurrnetWeather} />
         <div className="grid w-full gap-4 grid-cols-2 content-center lg:w-fit">
           <HumidityInfo
@@ -45,8 +45,8 @@ const AppInterface = async ({ city }: { city: string }) => {
           <WindInfo wind={weatherCityData.current!.wind} />
         </div>
         <PopularCities />
-      </div>
-      <div className="flex flex-wrap gap-4 mt-4 lg:flex-nowrap">
+      </section>
+      <section className="flex flex-wrap gap-4 mt-4 lg:flex-nowrap">
         <div className="flex flex-col gap-4 max-w-lg w-full">
           <SunriseInfo
             timezone={weatherCityData.current!.timezone}
@@ -58,7 +58,7 @@ const AppInterface = async ({ city }: { city: string }) => {
           />
         </div>
         <Forecast forecastWeather={weatherCityData.forecast!} />
-      </div>
+      </section>
       <Map
         lat={weatherCityData.current!.coord.lat}
         lon={weatherCityData.current!.coord.lon}

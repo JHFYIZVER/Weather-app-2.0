@@ -30,7 +30,7 @@ const WindInfo = ({ wind }: Props) => {
           <div className="size-6 flex items-center justify-center">
             <Icons className="size-8 object-cover" name={name || "Wind"} />
           </div>
-          Ветер
+          <h3>Ветер</h3>
         </CardTitle>
       </CardHeader>
       <CardContent className="lg:p-0">

@@ -18,7 +18,7 @@ const PressureInfo = ({ pressure }: { pressure: number }) => {
           <div className="size-6 flex items-center justify-center">
             <Icons className="size-8 object-cover" name="Barometer" />
           </div>
-          Давление
+          <h3>Давление</h3>
         </CardTitle>
       </CardHeader>
       <CardContent className="lg:p-0">
