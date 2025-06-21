@@ -1,17 +1,14 @@
 "use client";
-import { Button } from "@/shared/ui/button";
 import { Card, CardContent, CardTitle } from "@/shared/ui/card";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const PopularCities = () => {
-  const router = useRouter();
   const cities = [
     { id: 1, name: "Санкт-Петербург" },
     { id: 2, name: "Москва" },
     { id: 3, name: "Казань" },
     { id: 4, name: "Калининград" },
-    { id: 5, name: "Нижний Новгород" },
+    { id: 5, name: "Чита" },
   ];
 
   return (

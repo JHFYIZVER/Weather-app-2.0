@@ -8,7 +8,7 @@ const Loading = () => {
   return (
     <>
       <Header />
-      <main className="w-full h-svh">
+      <div className="w-full h-svh">
         <div className="max-w-[1110px] w-full mx-auto p-5">
           <div className="flex w-full flex-wrap gap-4 lg:flex-nowrap">
             <Skeleton className="max-w-lg w-full" />
@@ -29,7 +29,7 @@ const Loading = () => {
           </div>
           <Skeleton className="w-full h-90 mt-4" />
         </div>
-      </main>
+      </div>
     </>
   );
 };
